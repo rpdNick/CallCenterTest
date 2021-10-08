@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./employers-style/style/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <title>Спасибо</title>
+</head>
+
+<body>
+    <div class="page-container" style="overflow-y: auto; background-position: bottom 0px right 0px;">
+        <div class="header-container">
+            <!-- <img class="logo" src="./employers-style/img/header-logo.png" alt=""> -->
+        </div>
+        <div class="employers-list-wrapper" style="margin-top: 150px;">
+            <h3 class="employers-list-title" style="text-align: center;">Спасибо за <br> участие в <span class="for-line">опросе!</span></h3>
+        </div>
+    </div>
+</body>
+<script>
+    history.pushState(null, null, location.href);
+    history.back();
+    history.forward();
+    window.onpopstate = function () {
+        history.go(1);
+    };
+</script>
+<style>
+    body .page-container .employers-list-wrapper .employers-list-title .for-line:after{
+        width: 113%;
+    }
+    @media (max-width: 362px){
+        body .page-container .employers-list-wrapper .employers-list-title{
+            font-size: 24px;
+        }
+    }
+</style>
+</html>
